@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		696E8CAC8463F2802B2F7F1C /* MainViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696E8758B946540C1C6430F0 /* MainViewCtl.swift */; };
+		83B68ACD1E67A6EE00442DB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B68ACC1E67A6EE00442DB5 /* AppDelegate.swift */; };
+		83B68AD41E67A6EE00442DB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83B68AD31E67A6EE00442DB5 /* Assets.xcassets */; };
+		83B68AD71E67A6EE00442DB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B68AD51E67A6EE00442DB5 /* LaunchScreen.storyboard */; };
+		83B68AE01E67F13700442DB5 /* Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B68ADF1E67F13700442DB5 /* Specs.swift */; };
+		88F020A3274011085FF29856 /* Pods_TrustIM_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF99739F45A354D10B484931 /* Pods_TrustIM_iOS.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		52A4E46B5BB4E93D2157A14C /* Pods-TrustIM-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrustIM-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrustIM-iOS/Pods-TrustIM-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		696E8758B946540C1C6430F0 /* MainViewCtl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewCtl.swift; sourceTree = "<group>"; };
+		83B68AC91E67A6EE00442DB5 /* TrustIM-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TrustIM-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83B68ACC1E67A6EE00442DB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		83B68AD31E67A6EE00442DB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		83B68AD61E67A6EE00442DB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		83B68AD81E67A6EE00442DB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83B68ADF1E67F13700442DB5 /* Specs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Specs.swift; path = Helpers/Specs.swift; sourceTree = "<group>"; };
+		AF99739F45A354D10B484931 /* Pods_TrustIM_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrustIM_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDDC0071C7440B837846D19D /* Pods-TrustIM-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrustIM-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrustIM-iOS/Pods-TrustIM-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83B68AC61E67A6EE00442DB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88F020A3274011085FF29856 /* Pods_TrustIM_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3898EDCCDED6401207CC5F36 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BDDC0071C7440B837846D19D /* Pods-TrustIM-iOS.debug.xcconfig */,
+				52A4E46B5BB4E93D2157A14C /* Pods-TrustIM-iOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		696E88A24278237271D0FA1B /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		696E8ADDFFA7CC82FC23C0E8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		696E8B7B86C611AD086C3358 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				696E8758B946540C1C6430F0 /* MainViewCtl.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		696E8E1949CDFA01DFF37B2C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		83B68AC01E67A6EE00442DB5 = {
+			isa = PBXGroup;
+			children = (
+				83B68ACB1E67A6EE00442DB5 /* TrustIM-iOS */,
+				83B68ACA1E67A6EE00442DB5 /* Products */,
+				3898EDCCDED6401207CC5F36 /* Pods */,
+				FA4D39BBA9359EED6C40ECAA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		83B68ACA1E67A6EE00442DB5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83B68AC91E67A6EE00442DB5 /* TrustIM-iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83B68ACB1E67A6EE00442DB5 /* TrustIM-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				83B68ADE1E67F10E00442DB5 /* Helpers */,
+				83B68ACC1E67A6EE00442DB5 /* AppDelegate.swift */,
+				83B68AD31E67A6EE00442DB5 /* Assets.xcassets */,
+				83B68AD51E67A6EE00442DB5 /* LaunchScreen.storyboard */,
+				83B68AD81E67A6EE00442DB5 /* Info.plist */,
+				696E8E1949CDFA01DFF37B2C /* Models */,
+				696E8B7B86C611AD086C3358 /* Views */,
+				696E8ADDFFA7CC82FC23C0E8 /* ViewModels */,
+				696E88A24278237271D0FA1B /* Stores */,
+			);
+			path = "TrustIM-iOS";
+			sourceTree = "<group>";
+		};
+		83B68ADE1E67F10E00442DB5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				83B68ADF1E67F13700442DB5 /* Specs.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		FA4D39BBA9359EED6C40ECAA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF99739F45A354D10B484931 /* Pods_TrustIM_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83B68AC81E67A6EE00442DB5 /* TrustIM-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83B68ADB1E67A6EE00442DB5 /* Build configuration list for PBXNativeTarget "TrustIM-iOS" */;
+			buildPhases = (
+				CAEA8276B8D6B488309B81B9 /* [CP] Check Pods Manifest.lock */,
+				83B68AC51E67A6EE00442DB5 /* Sources */,
+				83B68AC61E67A6EE00442DB5 /* Frameworks */,
+				83B68AC71E67A6EE00442DB5 /* Resources */,
+				219222DBA6316371A31C035E /* [CP] Embed Pods Frameworks */,
+				46F8529EB7321E11DC202C92 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TrustIM-iOS";
+			productName = "TrustIM-iOS";
+			productReference = 83B68AC91E67A6EE00442DB5 /* TrustIM-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83B68AC11E67A6EE00442DB5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = towry;
+				TargetAttributes = {
+					83B68AC81E67A6EE00442DB5 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 5S95K97BRD;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 83B68AC41E67A6EE00442DB5 /* Build configuration list for PBXProject "TrustIM-iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83B68AC01E67A6EE00442DB5;
+			productRefGroup = 83B68ACA1E67A6EE00442DB5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83B68AC81E67A6EE00442DB5 /* TrustIM-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		83B68AC71E67A6EE00442DB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83B68AD71E67A6EE00442DB5 /* LaunchScreen.storyboard in Resources */,
+				83B68AD41E67A6EE00442DB5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		219222DBA6316371A31C035E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrustIM-iOS/Pods-TrustIM-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46F8529EB7321E11DC202C92 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrustIM-iOS/Pods-TrustIM-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CAEA8276B8D6B488309B81B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83B68AC51E67A6EE00442DB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83B68AE01E67F13700442DB5 /* Specs.swift in Sources */,
+				83B68ACD1E67A6EE00442DB5 /* AppDelegate.swift in Sources */,
+				696E8CAC8463F2802B2F7F1C /* MainViewCtl.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		83B68AD51E67A6EE00442DB5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83B68AD61E67A6EE00442DB5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		83B68AD91E67A6EE00442DB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		83B68ADA1E67A6EE00442DB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		83B68ADC1E67A6EE00442DB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDDC0071C7440B837846D19D /* Pods-TrustIM-iOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5S95K97BRD;
+				INFOPLIST_FILE = "TrustIM-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.towry.TrustIM-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		83B68ADD1E67A6EE00442DB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52A4E46B5BB4E93D2157A14C /* Pods-TrustIM-iOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5S95K97BRD;
+				INFOPLIST_FILE = "TrustIM-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.towry.TrustIM-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83B68AC41E67A6EE00442DB5 /* Build configuration list for PBXProject "TrustIM-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83B68AD91E67A6EE00442DB5 /* Debug */,
+				83B68ADA1E67A6EE00442DB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83B68ADB1E67A6EE00442DB5 /* Build configuration list for PBXNativeTarget "TrustIM-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83B68ADC1E67A6EE00442DB5 /* Debug */,
+				83B68ADD1E67A6EE00442DB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83B68AC11E67A6EE00442DB5 /* Project object */;
+}
