@@ -5,10 +5,15 @@
 
 import UIKit
 
-class MainViewCtl: UIViewController {
-
+class MainViewCtl: BaseViewCtl {
+    
     override func viewDidLoad() {
-        self.view.backgroundColor = .white
+        super.viewDidLoad()
+        let loginVc = LoginViewCtl()
+        self.navigationController?.pushViewController(loginVc, animated: false)
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
 }

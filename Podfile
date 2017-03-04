@@ -1,8 +1,11 @@
-target 'TrustIM-iOS' do
-	use_frameworks!
+platform :ios, '8.0'
+use_frameworks!
 
-	pod 'Reveal-SDK', :configurations => ['Debug']
-	pod 'SnapKit', '~> 3.2.0'
-	pod 'DateToolsSwift'
-	pod 'Alamofire', '~> 4.4'
+target 'TrustIM-iOS' do
+  pod 'Reveal-SDK', :configurations => ['Debug']
+  pod 'SnapKit', '~> 3.2.0'
+  pod 'DateToolsSwift'
+  pod 'Alamofire', '~> 4.4'
+  pod 'RxSwift', '~> 3.0'
+  pod 'RxCocoa', '~> 3.0'
 end

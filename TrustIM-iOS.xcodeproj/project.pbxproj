@@ -8,22 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		696E8CAC8463F2802B2F7F1C /* MainViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696E8758B946540C1C6430F0 /* MainViewCtl.swift */; };
-		83B68ACD1E67A6EE00442DB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B68ACC1E67A6EE00442DB5 /* AppDelegate.swift */; };
+		832F7E681E69C313006FF245 /* BaseViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832F7E671E69C313006FF245 /* BaseViewCtl.swift */; };
+		832F7E6C1E6A666F006FF245 /* Refs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832F7E6B1E6A666F006FF245 /* Refs.swift */; };
+		832F7E6E1E6A66D2006FF245 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832F7E6D1E6A66D2006FF245 /* MainApp.swift */; };
 		83B68AD41E67A6EE00442DB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83B68AD31E67A6EE00442DB5 /* Assets.xcassets */; };
 		83B68AD71E67A6EE00442DB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B68AD51E67A6EE00442DB5 /* LaunchScreen.storyboard */; };
-		83B68AE01E67F13700442DB5 /* Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B68ADF1E67F13700442DB5 /* Specs.swift */; };
+		83B68AE61E685D1300442DB5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B68AE51E685D1300442DB5 /* User.swift */; };
+		83B68AE81E685D4600442DB5 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B68AE71E685D4600442DB5 /* UIColor+Extension.swift */; };
+		83B68AEA1E68615700442DB5 /* LoginViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B68AE91E68615700442DB5 /* LoginViewCtl.swift */; };
+		83B68AEC1E68621D00442DB5 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B68AEB1E68621D00442DB5 /* UserSession.swift */; };
+		83B68AF01E6868CC00442DB5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B68AEF1E6868CC00442DB5 /* LoginViewModel.swift */; };
 		88F020A3274011085FF29856 /* Pods_TrustIM_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF99739F45A354D10B484931 /* Pods_TrustIM_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		52A4E46B5BB4E93D2157A14C /* Pods-TrustIM-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrustIM-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrustIM-iOS/Pods-TrustIM-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		696E8758B946540C1C6430F0 /* MainViewCtl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewCtl.swift; sourceTree = "<group>"; };
+		832F7E671E69C313006FF245 /* BaseViewCtl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewCtl.swift; sourceTree = "<group>"; };
+		832F7E6B1E6A666F006FF245 /* Refs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Refs.swift; path = Helpers/Refs.swift; sourceTree = "<group>"; };
+		832F7E6D1E6A66D2006FF245 /* MainApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainApp.swift; path = Supports/MainApp.swift; sourceTree = "<group>"; };
 		83B68AC91E67A6EE00442DB5 /* TrustIM-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TrustIM-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		83B68ACC1E67A6EE00442DB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83B68AD31E67A6EE00442DB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83B68AD61E67A6EE00442DB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83B68AD81E67A6EE00442DB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		83B68ADF1E67F13700442DB5 /* Specs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Specs.swift; path = Helpers/Specs.swift; sourceTree = "<group>"; };
+		83B68AE51E685D1300442DB5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		83B68AE71E685D4600442DB5 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "Supports/UIColor+Extension.swift"; sourceTree = "<group>"; };
+		83B68AE91E68615700442DB5 /* LoginViewCtl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewCtl.swift; sourceTree = "<group>"; };
+		83B68AEB1E68621D00442DB5 /* UserSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSession.swift; path = Supports/UserSession.swift; sourceTree = "<group>"; };
+		83B68AEF1E6868CC00442DB5 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		AF99739F45A354D10B484931 /* Pods_TrustIM_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrustIM_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDDC0071C7440B837846D19D /* Pods-TrustIM-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrustIM-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrustIM-iOS/Pods-TrustIM-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,6 +71,7 @@
 		696E8ADDFFA7CC82FC23C0E8 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				83B68AEF1E6868CC00442DB5 /* LoginViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -67,6 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				696E8758B946540C1C6430F0 /* MainViewCtl.swift */,
+				83B68AE91E68615700442DB5 /* LoginViewCtl.swift */,
+				832F7E671E69C313006FF245 /* BaseViewCtl.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -74,6 +89,7 @@
 		696E8E1949CDFA01DFF37B2C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				83B68AE51E685D1300442DB5 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -99,11 +115,11 @@
 		83B68ACB1E67A6EE00442DB5 /* TrustIM-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				83B68ADE1E67F10E00442DB5 /* Helpers */,
-				83B68ACC1E67A6EE00442DB5 /* AppDelegate.swift */,
 				83B68AD31E67A6EE00442DB5 /* Assets.xcassets */,
 				83B68AD51E67A6EE00442DB5 /* LaunchScreen.storyboard */,
 				83B68AD81E67A6EE00442DB5 /* Info.plist */,
+				83B68AE21E6859E600442DB5 /* Supports */,
+				83B68ADE1E67F10E00442DB5 /* Helpers */,
 				696E8E1949CDFA01DFF37B2C /* Models */,
 				696E8B7B86C611AD086C3358 /* Views */,
 				696E8ADDFFA7CC82FC23C0E8 /* ViewModels */,
@@ -115,9 +131,19 @@
 		83B68ADE1E67F10E00442DB5 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				83B68ADF1E67F13700442DB5 /* Specs.swift */,
+				832F7E6B1E6A666F006FF245 /* Refs.swift */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		83B68AE21E6859E600442DB5 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				83B68AE71E685D4600442DB5 /* UIColor+Extension.swift */,
+				83B68AEB1E68621D00442DB5 /* UserSession.swift */,
+				832F7E6D1E6A66D2006FF245 /* MainApp.swift */,
+			);
+			name = Supports;
 			sourceTree = "<group>";
 		};
 		FA4D39BBA9359EED6C40ECAA /* Frameworks */ = {
@@ -251,9 +277,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83B68AE01E67F13700442DB5 /* Specs.swift in Sources */,
-				83B68ACD1E67A6EE00442DB5 /* AppDelegate.swift in Sources */,
+				832F7E6C1E6A666F006FF245 /* Refs.swift in Sources */,
+				832F7E6E1E6A66D2006FF245 /* MainApp.swift in Sources */,
 				696E8CAC8463F2802B2F7F1C /* MainViewCtl.swift in Sources */,
+				83B68AEC1E68621D00442DB5 /* UserSession.swift in Sources */,
+				83B68AE61E685D1300442DB5 /* User.swift in Sources */,
+				832F7E681E69C313006FF245 /* BaseViewCtl.swift in Sources */,
+				83B68AEA1E68615700442DB5 /* LoginViewCtl.swift in Sources */,
+				83B68AE81E685D4600442DB5 /* UIColor+Extension.swift in Sources */,
+				83B68AF01E6868CC00442DB5 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
