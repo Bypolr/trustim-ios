@@ -17,5 +17,10 @@ public struct Refs {
         public static let fontLightColor = UIColor(hex: 0xA2B0BC)
         public static let greenColor = UIColor(hex: 0x6BDC9E)
         public static let redColor = UIColor(hex: 0xF56868)
+        public static let primaryColor = UIColor(hex: 0x62CCA0)
+    }
+    
+    public struct Shape {
+        public static let cornerRadius = CGFloat(5.0)
     }
 }

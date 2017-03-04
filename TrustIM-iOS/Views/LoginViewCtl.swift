@@ -14,6 +14,15 @@ class LoginViewCtl: BaseViewCtl {
     var vm: LoginViewModel = LoginViewModel()
     var formView: UIView?
     var keyboardNeedLayout = true
+    var formBottomConstraint: Constraint? = nil
+    
+    lazy var loginBtn: UIButton = {
+        let btn = UIButton()
+        btn.setTitle("Login", for: .normal)
+        btn.backgroundColor = Refs.Color.primaryColor
+        btn.layer.cornerRadius = Refs.Shape.cornerRadius
+        return btn
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +51,8 @@ class LoginViewCtl: BaseViewCtl {
         emailInput.backgroundColor = UIColor.white
         emailInput.keyboardType = .emailAddress
         emailInput.autocapitalizationType = .none
-        emailInput.roundCorners(corners: [.topLeft, .topRight], radius: 10.0)
+        emailInput.tag = 1
+        emailInput.roundCorners(corners: [.topLeft, .topRight], radius: Refs.Shape.cornerRadius)
         
         emailInput.delegate = self
         loginFormView.addSubview(emailInput)
@@ -51,17 +61,23 @@ class LoginViewCtl: BaseViewCtl {
         passwordInput.placeholder = "Password"
         passwordInput.backgroundColor = UIColor.white
         passwordInput.isSecureTextEntry = true
-        passwordInput.roundCorners(corners: [.bottomLeft, .bottomRight], radius: 5.0)
+        passwordInput.tag = 2
+        passwordInput.delegate = self
+        passwordInput.roundCorners(corners: [.bottomLeft, .bottomRight], radius: Refs.Shape.cornerRadius)
         loginFormView.addSubview(passwordInput)
         
         let font = UIFont(name: (emailInput.font?.fontName)!, size: 13.0)
         emailInput.font = font
         passwordInput.font = font
         
+        // Login button
+        loginFormView.addSubview(loginBtn)
+        
         loginFormView.snp.makeConstraints { (make) in
-            make.center.equalTo(view)
-            make.width.equalTo(200)
-            make.height.equalTo(100)
+            make.centerX.equalTo(view)
+            self.formBottomConstraint = make.centerY.equalTo(view).constraint
+            make.width.equalTo(250)
+            make.height.equalTo(130)
         }
         
         emailInput.snp.makeConstraints { (make) in
@@ -76,6 +92,12 @@ class LoginViewCtl: BaseViewCtl {
             make.left.equalTo(0)
             make.right.equalTo(0)
             make.height.equalTo(40)
+        }
+        
+        loginBtn.snp.makeConstraints { (make) in
+            make.top.equalTo(passwordInput.snp.bottom).offset(10)
+            make.left.equalTo(0)
+            make.right.equalTo(0)
         }
         
         // loginFormView.backgroundColor = UIColor.cyan
@@ -96,38 +118,37 @@ class LoginViewCtl: BaseViewCtl {
 
 extension LoginViewCtl {
     func keyboardWasShown(aNotification: Notification) {
-        if !keyboardNeedLayout {
-            return
-        }
+        var kbRect = (aNotification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+        kbRect = self.view.convert(kbRect!, from: UIApplication.shared.keyWindow!)
         
-        let kbRect = (aNotification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+        let v = self.formView!
         
-        let view = self.formView!
-        UIView.animate(withDuration: 0.2, delay: 0, options: .curveLinear, animations: {
-            var frame = view.frame
-            frame.origin.y -= (kbRect?.height)! / 3
-            view.frame = frame
-            self.keyboardNeedLayout = false
+        if (v.frame.origin.y + v.bounds.height) > (kbRect?.origin.y)! {
+            UIView.animate(withDuration: 0.2, delay: 0, options: .curveLinear, animations: {
+                let offset = (kbRect?.origin.y)! - (v.frame.origin.y + v.bounds.height)
+                self.formBottomConstraint?.update(offset: offset)
+                self.view.layoutIfNeeded()
             }, completion: nil)
+        }
     }
     
     func keyboardWillBeHidden(aNotification: Notification) {
-        
-        let kbRect = (aNotification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
- 
-        let view = self.formView!
-        var frame = view.frame
-        frame.origin.y += (kbRect?.height)! / 3
-        view.frame = frame
-        keyboardNeedLayout = true
+        self.formBottomConstraint?.update(offset: 0)
+        self.view.layoutIfNeeded()
     }
 }
 
 extension LoginViewCtl: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField.isFirstResponder {
+        let nextTag = textField.tag + 1
+        let nextResponder = textField.superview?.viewWithTag(nextTag)
+        if nextResponder != nil {
+            nextResponder?.becomeFirstResponder()
+        } else {
             textField.resignFirstResponder()
         }
-        return true
+        
+        // we don want it to insert line-breaks
+        return false
     }
 }
