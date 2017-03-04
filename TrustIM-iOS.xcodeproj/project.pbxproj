@@ -11,6 +11,7 @@
 		832F7E681E69C313006FF245 /* BaseViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832F7E671E69C313006FF245 /* BaseViewCtl.swift */; };
 		832F7E6C1E6A666F006FF245 /* Refs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832F7E6B1E6A666F006FF245 /* Refs.swift */; };
 		832F7E6E1E6A66D2006FF245 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832F7E6D1E6A66D2006FF245 /* MainApp.swift */; };
+		832F7E711E6AA551006FF245 /* TITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832F7E701E6AA551006FF245 /* TITextField.swift */; };
 		83B68AD41E67A6EE00442DB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83B68AD31E67A6EE00442DB5 /* Assets.xcassets */; };
 		83B68AD71E67A6EE00442DB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B68AD51E67A6EE00442DB5 /* LaunchScreen.storyboard */; };
 		83B68AE61E685D1300442DB5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B68AE51E685D1300442DB5 /* User.swift */; };
@@ -27,6 +28,7 @@
 		832F7E671E69C313006FF245 /* BaseViewCtl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewCtl.swift; sourceTree = "<group>"; };
 		832F7E6B1E6A666F006FF245 /* Refs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Refs.swift; path = Helpers/Refs.swift; sourceTree = "<group>"; };
 		832F7E6D1E6A66D2006FF245 /* MainApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainApp.swift; path = Supports/MainApp.swift; sourceTree = "<group>"; };
+		832F7E701E6AA551006FF245 /* TITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TITextField.swift; path = TIViews/TITextField.swift; sourceTree = "<group>"; };
 		83B68AC91E67A6EE00442DB5 /* TrustIM-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TrustIM-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B68AD31E67A6EE00442DB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83B68AD61E67A6EE00442DB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		696E8B7B86C611AD086C3358 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				832F7E6F1E6AA51B006FF245 /* TIViews */,
 				696E8758B946540C1C6430F0 /* MainViewCtl.swift */,
 				83B68AE91E68615700442DB5 /* LoginViewCtl.swift */,
 				832F7E671E69C313006FF245 /* BaseViewCtl.swift */,
@@ -92,6 +95,14 @@
 				83B68AE51E685D1300442DB5 /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		832F7E6F1E6AA51B006FF245 /* TIViews */ = {
+			isa = PBXGroup;
+			children = (
+				832F7E701E6AA551006FF245 /* TITextField.swift */,
+			);
+			name = TIViews;
 			sourceTree = "<group>";
 		};
 		83B68AC01E67A6EE00442DB5 = {
@@ -281,6 +292,7 @@
 				832F7E6E1E6A66D2006FF245 /* MainApp.swift in Sources */,
 				696E8CAC8463F2802B2F7F1C /* MainViewCtl.swift in Sources */,
 				83B68AEC1E68621D00442DB5 /* UserSession.swift in Sources */,
+				832F7E711E6AA551006FF245 /* TITextField.swift in Sources */,
 				83B68AE61E685D1300442DB5 /* User.swift in Sources */,
 				832F7E681E69C313006FF245 /* BaseViewCtl.swift in Sources */,
 				83B68AEA1E68615700442DB5 /* LoginViewCtl.swift in Sources */,
