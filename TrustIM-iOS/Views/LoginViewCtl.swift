@@ -20,12 +20,11 @@ class LoginViewCtl: BaseViewCtl {
         // Hide the back button
         navigationItem.hidesBackButton = true
         title = "Login"
-    
-        setupView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setupView()
         registerKeyboardNotifications()
     }
     
@@ -43,8 +42,8 @@ class LoginViewCtl: BaseViewCtl {
         emailInput.backgroundColor = UIColor.white
         emailInput.keyboardType = .emailAddress
         emailInput.autocapitalizationType = .none
-        emailInput.translatesAutoresizingMaskIntoConstraints = false
-        emailInput.roundCorners(corners: [.topLeft, .topRight], radius: 5.0)
+        emailInput.roundCorners(corners: [.topLeft, .topRight], radius: 10.0)
+        
         emailInput.delegate = self
         loginFormView.addSubview(emailInput)
         
@@ -52,7 +51,7 @@ class LoginViewCtl: BaseViewCtl {
         passwordInput.placeholder = "Password"
         passwordInput.backgroundColor = UIColor.white
         passwordInput.isSecureTextEntry = true
-        // passwordInput.roundCorners(corners: [.bottomLeft, .bottomRight], radius: 5.0)
+        passwordInput.roundCorners(corners: [.bottomLeft, .bottomRight], radius: 5.0)
         loginFormView.addSubview(passwordInput)
         
         let font = UIFont(name: (emailInput.font?.fontName)!, size: 13.0)

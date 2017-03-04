@@ -9,6 +9,10 @@
 import UIKit
 
 class TITextField: UITextField {
+    
+    private var _corners: UIRectCorner?
+    private var _radius: CGFloat?
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
@@ -36,12 +40,33 @@ class TITextField: UITextField {
     
     // corners
     func roundCorners(corners: UIRectCorner, radius: CGFloat) {
-        print(self.bounds)
-        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-        let layer = CAShapeLayer()
-        layer.backgroundColor = UIColor.yellow.cgColor
-        layer.frame = self.bounds
-        layer.path = path.cgPath
-        self.layer.mask = layer
+        self._corners = corners
+        self._radius = radius
+    }
+    
+    private func _roundCorners() {
+        if self._corners == nil || self._radius == nil {
+            return
+        }
+        
+        let path = UIBezierPath(roundedRect: layer.bounds, byRoundingCorners: _corners!, cornerRadii: CGSize(width: _radius!, height: _radius!))
+        let mask = CAShapeLayer()
+        mask.frame = layer.bounds
+        mask.path = path.cgPath
+        layer.mask = mask
+        
+        // create border layer 
+        let borderLayer = CAShapeLayer()
+        borderLayer.path = path.cgPath
+        borderLayer.lineWidth = self.layer.borderWidth + 1
+        borderLayer.strokeColor = self.layer.borderColor
+        borderLayer.fillColor = nil
+        
+        self.layer.addSublayer(borderLayer)
+    }
+    
+    override func layoutSublayers(of layer: CALayer) {
+        super.layoutSublayers(of: layer)
+        self._roundCorners()
     }
 }
