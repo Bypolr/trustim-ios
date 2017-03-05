@@ -15,14 +15,44 @@ class LoginViewCtl: BaseViewCtl {
     var formView: UIView?
     var keyboardNeedLayout = true
     var formBottomConstraint: Constraint? = nil
+    var activityIndictor: UIActivityIndicatorView?
     
     lazy var loginBtn: UIButton = {
-        let btn = UIButton()
+        let btn = TIButton()
         btn.setTitle("Login", for: .normal)
         btn.backgroundColor = Refs.Color.primaryColor
+        btn.backgroundColorForHighlight = Refs.Color.primaryColorDarken
         btn.layer.cornerRadius = Refs.Shape.cornerRadius
+        
+        btn.addTarget(self, action: #selector(loginAction), for: .touchDown)
+        
         return btn
     }()
+    
+    func loginAction() {
+        
+    }
+    
+    func addLoginAction() {
+        loginBtn.rx.tap
+            .withLatestFrom(vm.formValid)
+            .filter { $0 }
+            .flatmap
+    }
+    
+    func showIndictor() {
+        if (activityIndictor == nil) {
+            activityIndictor = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+            activityIndictor?.center = CGPoint(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 5)
+            activityIndictor?.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin, .flexibleBottomMargin]
+            self.view.addSubview(activityIndictor!)
+        }
+        activityIndictor?.startAnimating()
+    }
+    
+    func hideIndictor() {
+        activityIndictor?.stopAnimating()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,27 +107,28 @@ class LoginViewCtl: BaseViewCtl {
             make.centerX.equalTo(view)
             self.formBottomConstraint = make.centerY.equalTo(view).constraint
             make.width.equalTo(250)
-            make.height.equalTo(130)
+            make.height.equalTo(150)
         }
         
         emailInput.snp.makeConstraints { (make) in
             make.top.equalTo(loginFormView.snp.top)
             make.left.equalTo(0)
             make.right.equalTo(0)
-            make.height.equalTo(40)
+            make.height.equalTo(50)
         }
         
         passwordInput.snp.makeConstraints { (make) in
             make.top.equalTo(emailInput.snp.bottom).offset(-1)
             make.left.equalTo(0)
             make.right.equalTo(0)
-            make.height.equalTo(40)
+            make.height.equalTo(50)
         }
         
         loginBtn.snp.makeConstraints { (make) in
             make.top.equalTo(passwordInput.snp.bottom).offset(10)
             make.left.equalTo(0)
             make.right.equalTo(0)
+            make.height.equalTo(50)
         }
         
         // loginFormView.backgroundColor = UIColor.cyan
@@ -122,10 +153,10 @@ extension LoginViewCtl {
         kbRect = self.view.convert(kbRect!, from: UIApplication.shared.keyWindow!)
         
         let v = self.formView!
-        
-        if (v.frame.origin.y + v.bounds.height) > (kbRect?.origin.y)! {
+        let formBottom = v.frame.origin.y + v.bounds.height
+        if formBottom >= (kbRect?.origin.y)! {
             UIView.animate(withDuration: 0.2, delay: 0, options: .curveLinear, animations: {
-                let offset = (kbRect?.origin.y)! - (v.frame.origin.y + v.bounds.height)
+                let offset = (kbRect?.origin.y)! - formBottom - 30
                 self.formBottomConstraint?.update(offset: offset)
                 self.view.layoutIfNeeded()
             }, completion: nil)

@@ -19,6 +19,7 @@
 		83B68AEA1E68615700442DB5 /* LoginViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B68AE91E68615700442DB5 /* LoginViewCtl.swift */; };
 		83B68AEC1E68621D00442DB5 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B68AEB1E68621D00442DB5 /* UserSession.swift */; };
 		83B68AF01E6868CC00442DB5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B68AEF1E6868CC00442DB5 /* LoginViewModel.swift */; };
+		83C10A281E6B417300E63D92 /* TIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C10A271E6B417300E63D92 /* TIButton.swift */; };
 		88F020A3274011085FF29856 /* Pods_TrustIM_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF99739F45A354D10B484931 /* Pods_TrustIM_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		83B68AE91E68615700442DB5 /* LoginViewCtl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewCtl.swift; sourceTree = "<group>"; };
 		83B68AEB1E68621D00442DB5 /* UserSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSession.swift; path = Supports/UserSession.swift; sourceTree = "<group>"; };
 		83B68AEF1E6868CC00442DB5 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		83C10A271E6B417300E63D92 /* TIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TIButton.swift; path = TIViews/TIButton.swift; sourceTree = "<group>"; };
 		AF99739F45A354D10B484931 /* Pods_TrustIM_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrustIM_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDDC0071C7440B837846D19D /* Pods-TrustIM-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrustIM-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrustIM-iOS/Pods-TrustIM-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				832F7E701E6AA551006FF245 /* TITextField.swift */,
+				83C10A271E6B417300E63D92 /* TIButton.swift */,
 			);
 			name = TIViews;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				696E8CAC8463F2802B2F7F1C /* MainViewCtl.swift in Sources */,
 				83B68AEC1E68621D00442DB5 /* UserSession.swift in Sources */,
 				832F7E711E6AA551006FF245 /* TITextField.swift in Sources */,
+				83C10A281E6B417300E63D92 /* TIButton.swift in Sources */,
 				83B68AE61E685D1300442DB5 /* User.swift in Sources */,
 				832F7E681E69C313006FF245 /* BaseViewCtl.swift in Sources */,
 				83B68AEA1E68615700442DB5 /* LoginViewCtl.swift in Sources */,

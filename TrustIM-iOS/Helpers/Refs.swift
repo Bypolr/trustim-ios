@@ -18,6 +18,7 @@ public struct Refs {
         public static let greenColor = UIColor(hex: 0x6BDC9E)
         public static let redColor = UIColor(hex: 0xF56868)
         public static let primaryColor = UIColor(hex: 0x62CCA0)
+        public static let primaryColorDarken = UIColor(hex: 0x42B686)
     }
     
     public struct Shape {
