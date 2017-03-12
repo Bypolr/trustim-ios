@@ -8,36 +8,115 @@
 
 import UIKit
 import SnapKit
+import RxSwift
+import RxCocoa
 
 class LoginViewCtl: BaseViewCtl {
-    
-    var vm: LoginViewModel = LoginViewModel()
+    var disposeBag: DisposeBag = DisposeBag()
+    var viewModel: LoginViewModel?
     var formView: UIView?
     var keyboardNeedLayout = true
     var formBottomConstraint: Constraint? = nil
     var activityIndictor: UIActivityIndicatorView?
+    var password: UITextField!
+    var email: UITextField!
     
     lazy var loginBtn: UIButton = {
         let btn = TIButton()
         btn.setTitle("Login", for: .normal)
         btn.backgroundColor = Refs.Color.primaryColor
-        btn.backgroundColorForHighlight = Refs.Color.primaryColorDarken
+        // btn.backgroundColorForHighlight = Refs.Color.primaryColorDarken
         btn.layer.cornerRadius = Refs.Shape.cornerRadius
-        
-        btn.addTarget(self, action: #selector(loginAction), for: .touchDown)
+        btn.layer.borderColor = Refs.Color.primaryColorDarken.cgColor
         
         return btn
     }()
     
-    func loginAction() {
-        
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Hide the back button
+        navigationItem.hidesBackButton = true
+        title = "Login"
     }
     
-    func addLoginAction() {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupView()
+        registerKeyboardNotifications()
+        
+        let gr = UITapGestureRecognizer()
+        gr.numberOfTapsRequired = 1
+        self.view.addGestureRecognizer(gr)
+        gr.rx.event.asObservable()
+            .subscribe(onNext: { [weak self] _ in
+                self?.email.resignFirstResponder()
+                self?.password.resignFirstResponder()
+            })
+            .addDisposableTo(disposeBag)
+        
+        viewModel = LoginViewModel(email: (email?.rx.text.orEmpty.asDriver())!, password: (password?.rx.text.orEmpty.asDriver())!)
+        
+        let vm: LoginViewModel = viewModel!
+        
         loginBtn.rx.tap
-            .withLatestFrom(vm.formValid)
-            .filter { $0 }
-            .flatmap
+            .withLatestFrom(vm.signinEnabled!)
+            .filter({
+                $0
+            })
+            .flatMapLatest({ valid -> Observable<LoginStatus> in
+                vm.login(email: self.email.text!, password: self.password.text!)
+                .trackActivity(vm.activityIndictor)
+                .observeOn(SerialDispatchQueueScheduler(qos: .userInteractive))
+            })
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { (loginstatus: LoginStatus) in
+                switch loginstatus {
+                case .none:
+                    break
+                case .error(let err):
+                    self.showError(err)
+                    break
+                case .user(let id):
+                    print("user id: \(id)")
+                    break
+                }
+            })
+            .addDisposableTo(disposeBag)
+        
+        vm.activityIndictor
+            .distinctUntilChanged()
+            .drive(onNext: { [weak self] active in
+                self?.activityIndictor?.isHidden = !active
+            })
+            .addDisposableTo(disposeBag)
+    }
+    
+    func showError(_ err: LoginError) {
+        let title: String
+        let message: String
+        
+        switch err {
+        case .server, .badResponse:
+            title = "出错了"
+            message = "网络错误"
+            break
+        case .invalidCredential:
+            title = "出错了"
+            message = "错误的邮箱地址或者密码"
+            break
+        default:
+            title = "出错了"
+            message = "未知错误"
+        }
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        deRegisterKeyboardNotifications()
     }
     
     func showIndictor() {
@@ -54,24 +133,6 @@ class LoginViewCtl: BaseViewCtl {
         activityIndictor?.stopAnimating()
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Hide the back button
-        navigationItem.hidesBackButton = true
-        title = "Login"
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        setupView()
-        registerKeyboardNotifications()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        deRegisterKeyboardNotifications()
-    }
-    
     func setupView() {
         let loginFormView = UIView()
         view.addSubview(loginFormView)
@@ -86,6 +147,7 @@ class LoginViewCtl: BaseViewCtl {
         
         emailInput.delegate = self
         loginFormView.addSubview(emailInput)
+        email = emailInput
         
         let passwordInput = TITextField()
         passwordInput.placeholder = "Password"
@@ -95,6 +157,8 @@ class LoginViewCtl: BaseViewCtl {
         passwordInput.delegate = self
         passwordInput.roundCorners(corners: [.bottomLeft, .bottomRight], radius: Refs.Shape.cornerRadius)
         loginFormView.addSubview(passwordInput)
+        password = passwordInput
+        
         
         let font = UIFont(name: (emailInput.font?.fontName)!, size: 13.0)
         emailInput.font = font

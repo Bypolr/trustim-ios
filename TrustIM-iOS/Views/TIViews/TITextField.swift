@@ -34,7 +34,7 @@ class TITextField: UITextField {
     func setup() {
         borderStyle = .none
         layer.masksToBounds = true
-        layer.borderColor = UIColor(hex: 0xE5EFEF).cgColor
+        layer.borderColor = UIColor(hex: 0xCCC9C9).cgColor
         layer.borderWidth = 1.0
     }
     

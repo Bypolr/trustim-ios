@@ -12,7 +12,7 @@ import UIKit
 public struct Refs {
     public struct Color {
         public static let tintColor = UIColor(hex: 0xFFFFFF)
-        public static let bgColor = UIColor(hex: 0xF4F8F8)
+        public static let bgColor = UIColor(hex: 0xFCFCFC)
         public static let fontColor = UIColor(hex: 0x7F93A2)
         public static let fontLightColor = UIColor(hex: 0xA2B0BC)
         public static let greenColor = UIColor(hex: 0x6BDC9E)

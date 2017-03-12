@@ -5,6 +5,9 @@ PODS:
   - RxCocoa (3.2.0):
     - RxSwift (~> 3.1)
   - RxSwift (3.2.0)
+  - RxSwiftUtilities (1.0.1):
+    - RxCocoa (~> 3.0)
+    - RxSwift (~> 3.0)
   - SnapKit (3.2.0)
 
 DEPENDENCIES:
@@ -13,7 +16,17 @@ DEPENDENCIES:
   - Reveal-SDK
   - RxCocoa (~> 3.0)
   - RxSwift (~> 3.0)
+  - RxSwiftUtilities (from `https://github.com/RxSwiftCommunity/RxSwiftUtilities.git`)
   - SnapKit (~> 3.2.0)
+
+EXTERNAL SOURCES:
+  RxSwiftUtilities:
+    :git: https://github.com/RxSwiftCommunity/RxSwiftUtilities.git
+
+CHECKOUT OPTIONS:
+  RxSwiftUtilities:
+    :commit: 9641e007c3ae067889bc6dc8830f3a4112ce0c10
+    :git: https://github.com/RxSwiftCommunity/RxSwiftUtilities.git
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
@@ -21,8 +34,9 @@ SPEC CHECKSUMS:
   Reveal-SDK: 564657bc66c93d2718b1c0121cdebe99d354ddab
   RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
+  RxSwiftUtilities: 2614ffe05d2da158f79f50314a08122d13ac61d4
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
 
-PODFILE CHECKSUM: fb72dc851663bb7cbb8a99c333203676f8fbab22
+PODFILE CHECKSUM: 0b4053b58600a496ee5be132c138a623c87ed8be
 
 COCOAPODS: 1.2.0
