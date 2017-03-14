@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		696E8676006E2ADBC241CB42 /* ChatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696E83D388EE892276670E15 /* ChatItem.swift */; };
+		696E882F20830CCC2FAF2A4F /* ChatListViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696E8E5FB58D050C1E54722D /* ChatListViewCtl.swift */; };
+		696E8B64D6D06F1D880AB458 /* ChatListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696E8691C9BE18B48BEF1D40 /* ChatListViewModel.swift */; };
 		696E8CAC8463F2802B2F7F1C /* MainViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696E8758B946540C1C6430F0 /* MainViewCtl.swift */; };
 		832F7E681E69C313006FF245 /* BaseViewCtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832F7E671E69C313006FF245 /* BaseViewCtl.swift */; };
 		832F7E6C1E6A666F006FF245 /* Refs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832F7E6B1E6A666F006FF245 /* Refs.swift */; };
@@ -25,7 +28,10 @@
 
 /* Begin PBXFileReference section */
 		52A4E46B5BB4E93D2157A14C /* Pods-TrustIM-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrustIM-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrustIM-iOS/Pods-TrustIM-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		696E83D388EE892276670E15 /* ChatItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatItem.swift; sourceTree = "<group>"; };
+		696E8691C9BE18B48BEF1D40 /* ChatListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListViewModel.swift; sourceTree = "<group>"; };
 		696E8758B946540C1C6430F0 /* MainViewCtl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewCtl.swift; sourceTree = "<group>"; };
+		696E8E5FB58D050C1E54722D /* ChatListViewCtl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListViewCtl.swift; sourceTree = "<group>"; };
 		832F7E671E69C313006FF245 /* BaseViewCtl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewCtl.swift; sourceTree = "<group>"; };
 		832F7E6B1E6A666F006FF245 /* Refs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Refs.swift; path = Helpers/Refs.swift; sourceTree = "<group>"; };
 		832F7E6D1E6A66D2006FF245 /* MainApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainApp.swift; path = Supports/MainApp.swift; sourceTree = "<group>"; };
@@ -76,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				83B68AEF1E6868CC00442DB5 /* LoginViewModel.swift */,
+				696E8691C9BE18B48BEF1D40 /* ChatListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -87,6 +94,7 @@
 				696E8758B946540C1C6430F0 /* MainViewCtl.swift */,
 				83B68AE91E68615700442DB5 /* LoginViewCtl.swift */,
 				832F7E671E69C313006FF245 /* BaseViewCtl.swift */,
+				696E8E5FB58D050C1E54722D /* ChatListViewCtl.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -95,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				83B68AE51E685D1300442DB5 /* User.swift */,
+				696E83D388EE892276670E15 /* ChatItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -302,6 +311,9 @@
 				83B68AEA1E68615700442DB5 /* LoginViewCtl.swift in Sources */,
 				83B68AE81E685D4600442DB5 /* UIColor+Extension.swift in Sources */,
 				83B68AF01E6868CC00442DB5 /* LoginViewModel.swift in Sources */,
+				696E882F20830CCC2FAF2A4F /* ChatListViewCtl.swift in Sources */,
+				696E8B64D6D06F1D880AB458 /* ChatListViewModel.swift in Sources */,
+				696E8676006E2ADBC241CB42 /* ChatItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

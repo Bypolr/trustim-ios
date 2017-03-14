@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol TINavigationDelegate {
+    func loginSuccess()
+}
+
 class BaseViewCtl: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()

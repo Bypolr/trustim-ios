@@ -4,6 +4,9 @@ PODS:
   - Reveal-SDK (7)
   - RxCocoa (3.2.0):
     - RxSwift (~> 3.1)
+  - RxDataSources (1.0.3):
+    - RxCocoa (~> 3.0)
+    - RxSwift (~> 3.0)
   - RxSwift (3.2.0)
   - RxSwiftUtilities (1.0.1):
     - RxCocoa (~> 3.0)
@@ -15,6 +18,7 @@ DEPENDENCIES:
   - DateToolsSwift
   - Reveal-SDK
   - RxCocoa (~> 3.0)
+  - RxDataSources (~> 1.0.3)
   - RxSwift (~> 3.0)
   - RxSwiftUtilities (from `https://github.com/RxSwiftCommunity/RxSwiftUtilities.git`)
   - SnapKit (~> 3.2.0)
@@ -33,10 +37,11 @@ SPEC CHECKSUMS:
   DateToolsSwift: d6bdef0956bf88e7d27414d24278f5b392b47a5d
   Reveal-SDK: 564657bc66c93d2718b1c0121cdebe99d354ddab
   RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
+  RxDataSources: a021a0e944ba5f7991259829d973afdbfa719c0b
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
   RxSwiftUtilities: 2614ffe05d2da158f79f50314a08122d13ac61d4
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
 
-PODFILE CHECKSUM: 0b4053b58600a496ee5be132c138a623c87ed8be
+PODFILE CHECKSUM: 5c6984e30cad2f2987a09af44d958e596f75754c
 
 COCOAPODS: 1.2.0

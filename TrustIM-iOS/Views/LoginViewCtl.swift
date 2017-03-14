@@ -12,6 +12,7 @@ import RxSwift
 import RxCocoa
 
 class LoginViewCtl: BaseViewCtl {
+    var delegate: TINavigationDelegate?
     var disposeBag: DisposeBag = DisposeBag()
     var viewModel: LoginViewModel?
     var formView: UIView?
@@ -69,12 +70,12 @@ class LoginViewCtl: BaseViewCtl {
                 .observeOn(SerialDispatchQueueScheduler(qos: .userInteractive))
             })
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { (loginstatus: LoginStatus) in
+            .subscribe(onNext: { [weak self] (loginstatus: LoginStatus) in
                 switch loginstatus {
                 case .none:
                     break
                 case .error(let err):
-                    self.showError(err)
+                    self?.showError(err)
                     break
                 case .user(let id):
                     print("user id: \(id)")
@@ -89,6 +90,10 @@ class LoginViewCtl: BaseViewCtl {
                 self?.activityIndictor?.isHidden = !active
             })
             .addDisposableTo(disposeBag)
+    }
+
+    func afterLoginSuccess() {
+        delegate?.loginSuccess()
     }
     
     func showError(_ err: LoginError) {
@@ -110,7 +115,10 @@ class LoginViewCtl: BaseViewCtl {
         }
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        let cancelAction: UIAlertAction = UIAlertAction(title: "OK", style: .cancel, handler: { [weak self] (_) -> Void in
+            self?.afterLoginSuccess()
+        })
+        alert.addAction(cancelAction)
         present(alert, animated: true, completion: nil)
     }
     

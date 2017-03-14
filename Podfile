@@ -8,5 +8,6 @@ target 'TrustIM-iOS' do
   pod 'Alamofire', '~> 4.4'
   pod 'RxSwift', '~> 3.0'
   pod 'RxCocoa', '~> 3.0'
+  pod 'RxDataSources', '~> 1.0.3'
   pod 'RxSwiftUtilities', :git => 'https://github.com/RxSwiftCommunity/RxSwiftUtilities.git'
 end

@@ -29,12 +29,12 @@ class MainApp: UIResponder, UIApplicationDelegate {
     }
     
     func globalCustomize() {
-        window?.backgroundColor = Refs.Color.tintColor
-        UIView.appearance().tintColor = Refs.Color.tintColor
+        window?.backgroundColor = Refs.Color.bgColor
         // - navigationbar
-        UINavigationBar.appearance().barTintColor = Refs.Color.tintColor
+        // UINavigationBar.appearance().barTintColor = Refs.Color.tintColor
         // hide the bar border
         // UINavigationBar.appearance().clipsToBounds = true
+        UIView.appearance().tintColor = Refs.Color.tintColor
         navCtl?.navigationBar.isTranslucent = false
     }
 }
