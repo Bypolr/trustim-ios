@@ -5,8 +5,8 @@
 
 struct ChatItem {
     let icon: String
-    let unread: Int
     let nickname: String
-    let message: String
     let datetime: String
+    let unread: Int
+    let message: String
 }

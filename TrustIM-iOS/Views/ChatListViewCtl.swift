@@ -10,7 +10,7 @@ import RxDataSources
 
 class ChatListViewCtl: BaseViewCtl {
     var tableView: UITableView!
-    let disposeBag = DisposeBag
+    let disposeBag = DisposeBag()
     let viewModel = ChatListViewModel()
 
     override func viewDidLoad() {
@@ -20,7 +20,10 @@ class ChatListViewCtl: BaseViewCtl {
         tableView = UITableView(frame: self.view.bounds, style: .plain)
         self.view.addSubview(tableView)
 
-        // let dataSource = RxTableViewReactiveArrayDataSource
+//        let data = viewModel.getChatList()
+//        data.bindTo(tableView.rx.items(cellIdentifier: "Cell")) { index, model, cell in
+//            cell.textLabel?.text = model
+//        }.disposed(by: disposeBag)
     }
 
 //    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

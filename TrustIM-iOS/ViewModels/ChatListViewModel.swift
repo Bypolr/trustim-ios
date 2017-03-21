@@ -4,11 +4,12 @@
 //
 
 import RxSwift
+import RxCocoa
 import RxDataSources
 
 class ChatListViewModel {
     func getChatList() -> Observable<[SectionModel<String, ChatItem>]> {
-        return Observable.create { (observer) -> Disposable in
+        return Observable.create { (observer) in
             let list = [
                 ChatItem(icon: "demo.png", nickname: "towry", datetime: "2017-10-10", unread: 23, message: "hello"),
                 ChatItem(icon: "demo.png", nickname: "towry2", datetime: "2017-10-10", unread: 23, message: "hello"),
@@ -24,8 +25,9 @@ class ChatListViewModel {
             let section: [SectionModel<String, ChatItem>] = [SectionModel(model: "", items: list)]
             observer.onNext(section)
             observer.onCompleted()
-
-            return AnonymousDisposable{}
+            
+            
+            return Disposables.create()
         }
     }
 }
